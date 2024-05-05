@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cityscape Animation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #007bff;
+            margin-top: 20px;
+            font-size: 28px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        ol, ul {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+        }
+
+        /* Additional Styling */
+        ol {
+            list-style-type: decimal;
+        }
+
+        ul {
+    list-style-type: none; /* Remove default list styles */
+}
+
+ul li::marker {
+    font-weight: bold; /* Make the list markers bold */
+}
+
+
+
+        .solution {
+            margin-left: 20px;
+            color: #6c757d;
+        }
+
+        .solution code {
+            background-color: #f8f9fa;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        .future-enhancements {
+            font-style: italic;
+            color: #6c757d;
+            margin-top: 20px;
+        }
+
+        /* Custom Styling */
+        .main-heading {
+            text-align: center;
+            font-size: 25px;
+            margin-bottom: 30px;
+            color: #000000
+        }
+        .main-heading2 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 30px;
+            color: #000000;
+            text-decoration: underline;
+        }
+        .names{
+            text-align: center;
+            font-size: 15px;
+            /* margin-bottom: 30px; */
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="main-heading">Computer Graphics Project (UCS505)</h2>
+        <h2 class="main-heading2">DYNAMIC CITYSCAPE</h2>
+        <p class="names"> <B>PIXEL PROS:</B> <br> Ashna Arora: 102117144 <br>Drishti Agarwal: 102117158 <br>Mannat Pruthi: 102117185</p>
+        <h1>Resources and Assets</h1>
+        <ol>
+            <li><strong>HTML5 Canvas API:</strong>Used to draw and animate graphics directly in the browser, such as buildings, clouds, and moving vehicles.</li>
+            <li><strong>JavaScript:</strong> Handles logic for animations, user interactions, and event management.</li>
+            <li><strong>CSS and TailwindCSS:</strong> For styling the canvas and other HTML elements, making the UI responsive and visually appealing.</li>
+            <li><strong>Ionicons:</strong> Provides scalable vector icons that can be customized for web UIs, enhancing the user interface with visually pleasing elements.</li>
+        </ol>
+
+        <h1>Sources of Inspiration</h1>
+        <ol>
+            <li> <strong>Interactive Web Animations:</strong> Websites like CodePen and interactive animations by developers that showcase creative ways to use canvas and JavaScript.</li>
+            <li><strong>Cityscape and Simulation Games:</strong> Visual and functional elements might draw inspiration from simulation games, where dynamic interactions with various entities are central.</li>
+        </ol>
+
+        <h1>Objectives</h1>
+        <ol>
+            <li><strong>Visualization and Interactivity</strong>: Creating a dynamic cityscape where users can interact with elements like buses and pedestrians.</li>
+            <li><strong>Educational Purpose</strong>: Demonstrating the capabilities of HTML5 Canvas and JavaScript in creating real-time animations and interactions.</li>
+        </ol>
+
+        <h1>Challenges and Solutions</h1>
+        <ol>
+            <li>
+                <strong>Animation Synchronization</strong>: Coordinating multiple animations such as moving clouds, a walking person, and rotating clock hands.
+                <div class="solution">Solution: Utilized <code>requestAnimationFrame</code> for smooth animations that sync across different parts of the scene.</div>
+            </li>
+            <li>
+                <strong>Dynamic User Interactions</strong>: Managing complex interactions, such as stopping the bus when clicked and having characters board or alight.
+                <div class="solution">Solution: Implemented detailed event listeners that modify the state of the animation based on user input, allowing for real-time interaction.</div>
+            </li>
+            <li>
+                <strong>Performance Optimization</strong>: Ensuring animations run smoothly without performance lags despite the complexity.
+                <div class="solution">Solution: Careful management of animation loops and conditional rendering to minimize unnecessary redraws and computations.</div>
+            </li>
+            <li>
+                <strong>Realistic Movement and Sound Integration</strong>: Creating realistic movement patterns for the bus and integrating sound effects.
+                <div class="solution">Solution: Calculated movement vectors and used audio elements to enhance the realism and interactivity of the bus component.</div>
+            </li>
+        </ol>
+
+        <h1 >Future Enhancements</h1>
+        <ol>
+            <li><strong>Weather Effects:</strong> Integrate weather conditions like rain or snow, affecting the appearance and behavior of the cityscape.</li>
+            <li><strong>Day-Night Cycle:</strong> Implement a day-night cycle with corresponding changes in lighting and activity levels.</li>
+            <li><strong>Traffic Simulation: </strong>Expand the simulation to include traffic patterns, with cars obeying traffic rules and reacting to user interactions.</li>
+            <li><strong>Mobile Optimization:</strong> Ensure the application is fully responsive and optimized for mobile devices to reach a wider audience.</li>
+        </ol>
+        <h1>Project Link</h1>
+        <a href="https://mannatpruthi.github.io/0x08-2d-animation-project/"><h3>Dynamic Cityscape Animation Project</h3></a>
+    </div>
+</body>
+</html>
