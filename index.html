@@ -5,118 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cityscape Animation</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-
-        h1 {
-            color: #007bff;
-            margin-top: 20px;
-            font-size: 28px;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 10px;
-        }
-
-        ol, ul {
-            margin-top: 10px;
-            margin-bottom: 20px;
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        strong {
-            font-weight: bold;
-        }
-
-        em {
-            font-style: italic;
-        }
-
-        code {
-            font-family: Consolas, monospace;
-        }
-
-        /* Additional Styling */
-        ol {
-            list-style-type: decimal;
-        }
-
-        ul {
-    list-style-type: none; /* Remove default list styles */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Creates five columns */
+    gap: 10px;
+    margin: 20px 0;
 }
 
-ul li::marker {
-    font-weight: bold; /* Make the list markers bold */
+.image-gallery img {
+    width: 100%;
+    border-radius: 5px; /* Optional: adds rounded corners to your images */
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f2f2;
+    margin-left: 30px;
+    padding: 0;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.container {
+    width: 100%; /* Full width */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1 {
+    color: #007bff;
+    margin-top: 20px;
+    font-size: 28px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+ol, ul {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+code {
+    font-family: Consolas, monospace;
+}
+
+.solution {
+    margin-left: 20px;
+    color: #6c757d;
+}
+
+.solution code {
+    background-color: #f8f9fa;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.future-enhancements {
+    font-style: italic;
+    color: #6c757d;
+    margin-top: 20px;
+}
+
+.main-heading {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 30px;
+    color: #000000
+}
+
+.main-heading2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: #000000;
+    text-decoration: underline;
+}
+
+.names{
+    text-align: center;
+    font-size: 15px;
+    color: #000000;
 }
 
 
 
-        .solution {
-            margin-left: 20px;
-            color: #6c757d;
-        }
-
-        .solution code {
-            background-color: #f8f9fa;
-            padding: 2px 4px;
-            border-radius: 4px;
-        }
-
-        .future-enhancements {
-            font-style: italic;
-            color: #6c757d;
-            margin-top: 20px;
-        }
-
-        /* Custom Styling */
-        .main-heading {
-            text-align: center;
-            font-size: 25px;
-            margin-bottom: 30px;
-            color: #000000
-        }
-        .main-heading2 {
-            text-align: center;
-            font-size: 40px;
-            margin-bottom: 30px;
-            color: #000000;
-            text-decoration: underline;
-        }
-        .names{
-            text-align: center;
-            font-size: 15px;
-            /* margin-bottom: 30px; */
-            color: #000000;
-        }
     </style>
 </head>
 <body>
+    
+
     <div class="container">
         <h2 class="main-heading">Computer Graphics Project (UCS505)</h2>
         <h2 class="main-heading2">DYNAMIC CITYSCAPE</h2>
         <p class="names"> <B>PIXEL PROS:</B> <br> Ashna Arora: 102117144 <br>Drishti Agarwal: 102117158 <br>Mannat Pruthi: 102117185</p>
         <h1>Resources and Assets</h1>
         <ol>
-            <li><strong>HTML5 Canvas API:</strong>Used to draw and animate graphics directly in the browser, such as buildings, clouds, and moving vehicles.</li>
+            <li><strong>HTML5 Canvas:</strong>Used to draw and animate graphics directly in the browser, such as buildings, clouds, and moving vehicles.</li>
             <li><strong>JavaScript:</strong> Handles logic for animations, user interactions, and event management.</li>
-            <li><strong>CSS and TailwindCSS:</strong> For styling the canvas and other HTML elements, making the UI responsive and visually appealing.</li>
-            <li><strong>Ionicons:</strong> Provides scalable vector icons that can be customized for web UIs, enhancing the user interface with visually pleasing elements.</li>
+            
+           
         </ol>
 
         <h1>Sources of Inspiration</h1>
@@ -130,6 +131,11 @@ ul li::marker {
             <li><strong>Visualization and Interactivity</strong>: Creating a dynamic cityscape where users can interact with elements like buses and pedestrians.</li>
             <li><strong>Educational Purpose</strong>: Demonstrating the capabilities of HTML5 Canvas and JavaScript in creating real-time animations and interactions.</li>
         </ol>
+        <h1>Demo Video</h1>
+        <div class="video-container">
+           <center> <iframe width="700" height="450" src="https://www.youtube.com/embed/xnKln49afTY?si=Jdd-ttFoGpy9l5xM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
+        </div>
+       
 
         <h1>Challenges and Solutions</h1>
         <ol>
