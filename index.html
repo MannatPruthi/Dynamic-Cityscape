@@ -5,33 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cityscape Animation</title>
     <style>
+        .navbar {
+            background-color: #007bff;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            padding: 6px 0;
+            overflow: hidden;
+            position: sticky; /* Make the navbar sticky */
+            top: 0; /* Set the distance from the top of the page to zero when it sticks */
+            z-index: 1000; /* Ensure the navbar stays on top of other content */
+        }
+        .navbar a {
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            text-align: center;
+            transition: color 0.3s, border-color 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+        .navbar a:hover, .navbar a:focus {
+            color: #ff7f50;
+            border-bottom-color: #ff7f50;
+        }
+        .image-gallery .audio-container, .image-gallery img {
+    width: 100%;
+    height: 200px; /* Ensures the audio container has the same height as the images */
+    object-fit: contain; /* Ensures images are scaled correctly within the boxes */
+    border-radius: 5px; /* Adds rounded corners */
+    border: 2px solid black; /* Adds a black border to outline each box */
+    display: flex; /* Ensures content is centered, useful for the audio controls */
+    align-items: center; /* Centers content vertically within the container */
+    justify-content: center; /* Centers content horizontally within the container */
+}
+
 .image-gallery {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Creates five columns */
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(2, 1fr); 
     gap: 10px;
     margin: 20px 0;
 }
 
 .image-gallery img {
-    width: 100%;
-    border-radius: 5px; /* Optional: adds rounded corners to your images */
+    object-fit: contain; /* Maintains the aspect ratio of the images */
 }
+
+     
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f2f2f2;
-    margin-left: 30px;
-    padding: 0;
     color: #333;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    height: 100%; /* Ensures the body takes full viewport height */
+    width: 100%; /* Ensures the body takes full viewport width */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+
 }
 
+
 .container {
-    width: 100%; /* Full width */
+    width: 100%; /* Change from 90% to 100% if you want it to fit better edge-to-edge */
+    max-width: 1200px; /* Keeps a maximum width to avoid too wide on large screens */
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    margin: 0 auto; /* Ensure it's centered and the horizontal margins are auto */
 }
+
 
 h1 {
     color: #007bff;
@@ -79,6 +123,11 @@ code {
     color: #6c757d;
     margin-top: 20px;
 }
+h1, h2 {
+    padding-top: 70px; /* This padding helps ensure content isn't hidden under the navbar */
+    margin-top: -70px; /* Negative margin to pull the content up to the right place */
+    position: relative; /* Ensure the positioning context is correct */
+}
 
 .main-heading {
     text-align: center;
@@ -100,47 +149,79 @@ code {
     font-size: 15px;
     color: #000000;
 }
-
-
-
     </style>
 </head>
 <body>
     
+<div class="navbar">
+        <a href="#overview">Project Overview</a>
+        <a href="#objectives">Objectives</a>
+        <a href="#technology">Technology Used</a>
+        <a href="#assets">Assets</a>
+        <a href="#demo">Demo Video</a>
+        <a href="#inspiration">Inspiration</a>
+        <a href="#challenges">Challenges</a>
+        <a href="#enhancements">Future Enhancements</a>
+        <a href="#links">Important Links</a>
+    </div>
 
     <div class="container">
-        <h2 class="main-heading">Computer Graphics Project (UCS505)</h2>
+        <h2 class="main-heading">Computer Graphics Animation Project (UCS505)</h2>
         <h2 class="main-heading2">DYNAMIC CITYSCAPE</h2>
-        <p class="names"> <B>PIXEL PROS:</B> <br> Ashna Arora: 102117144 <br>Drishti Agarwal: 102117158 <br>Mannat Pruthi: 102117185</p>
-        <h1>Resources and Assets</h1>
+        <p class="names"> <B>By Team PIXEL PROS:</B> <br>(102117144) Ashna Arora <br>(102117158) Drishti Agarwal<br>(102117185) Mannat Pruthi</p>
+         <h1 id="overview">Project Overview</h1>
+        <p>This project showcases an animated cityscape viewed from a roadside perspective. The scene includes stationary elements like buildings, houses, streetlights, trees, a sun, a bus stop sign, and a clock tower with a working analog clock that updates in real-time. Enhancing the dynamics of the scene, a moving bus enters from the left, stops at the bus stop to pick up a passenger, and continues until a viewer clicks a location on the road where it stops again to drop off the passenger. Additionally, clouds drift smoothly from right to left across the sky, and a flock of birds flies independently, adding layers of movement and realism to the static backdrop. These elements combine to create a lively and interactive urban environment, demonstrating sophisticated use of HTML5 Canvas and JavaScript for real-time animation and user interaction.</p>
+        <h1 id="objectives">Objectives</h1>
         <ol>
-            <li><strong>HTML5 Canvas:</strong>Used to draw and animate graphics directly in the browser, such as buildings, clouds, and moving vehicles.</li>
+            <li><strong>Interactive Bus Stop Functionality:</strong> Implement interactive functionality that allows users to control the bus's movements by clicking on the screen to determine where the bus stops to pick up and drop off passengers.</li>
+            <li><strong>User Engagement Through Direct Interaction:</strong> Create an engaging user experience by enabling direct manipulation of the animation, such as deciding the time bus pauses at stops, thereby increasing user participation and interest.</li>
+            <li><strong>Cloud and Bird Dynamics:</strong> Code the autonomous movement of clouds and birds to simulate environmental factors, adding layers of complexity and realism to the animation.</li>
+        </ol>
+        <h1 id="technology">Technology Used</h1>
+        <ol>
+            <li><strong>HTML5 Canvas:</strong> Used to draw and animate graphics directly in the browser, such as buildings, clouds, and moving vehicles.</li>
             <li><strong>JavaScript:</strong> Handles logic for animations, user interactions, and event management.</li>
+       </ol>     
+            <h1 id="assets">Assets</h1>
+            <div class="image-gallery">
+    <img src="assets\bus.jpeg" alt="Description of image 1">
+    <img src="assets\house.jpeg" alt="Description of image 2">
+    <img src="assets\cloud.jpeg" alt="Description of image 3">
+    <img src="assets\sun.jpeg" alt="Description of image 4">
+    <img src="assets\man.jpeg" alt="Description of image 5">
+    <img src="assets\tree.jpeg" alt="Description of image 6">
+    <img src="assets\lamp.jpeg" alt="Description of image 7">
+    <img src="assets\building.jpeg" alt="Description of image 8">
+    <img src="assets\stop.jpeg" alt="Description of image 9">
+    <img src="assets\clocktower.jpeg" alt="Description of image 10">
+    <img src="assets\birds.png" alt="Description of image 11">
+     <div class="audio-container">
+        <audio controls>
+            <source src="assets\horn.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+</div>
+
             
            
-        </ol>
 
-        <h1>Sources of Inspiration</h1>
-        <ol>
-            <li> <strong>Interactive Web Animations:</strong> Websites like CodePen and interactive animations by developers that showcase creative ways to use canvas and JavaScript.</li>
-            <li><strong>Cityscape and Simulation Games:</strong> Visual and functional elements might draw inspiration from simulation games, where dynamic interactions with various entities are central.</li>
-        </ol>
+<h1 id="demo">Demo Video</h1>
+<div class="video-container">
+    <center> <iframe width="700" height="450" src="https://www.youtube.com/embed/xnKln49afTY?si=Jdd-ttFoGpy9l5xM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
+</div>
 
-        <h1>Objectives</h1>
-        <ol>
-            <li><strong>Visualization and Interactivity</strong>: Creating a dynamic cityscape where users can interact with elements like buses and pedestrians.</li>
-            <li><strong>Educational Purpose</strong>: Demonstrating the capabilities of HTML5 Canvas and JavaScript in creating real-time animations and interactions.</li>
-        </ol>
-        <h1>Demo Video</h1>
-        <div class="video-container">
-           <center> <iframe width="700" height="450" src="https://www.youtube.com/embed/xnKln49afTY?si=Jdd-ttFoGpy9l5xM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
-        </div>
-       
 
-        <h1>Challenges and Solutions</h1>
+ <h1 id="inspiration">Sources of Inspiration</h1>
+<ol>
+    <li> <strong>Interactive Web Animations:</strong> Websites like CodePen and interactive animations by developers that showcase creative ways to use canvas and JavaScript.</li>
+    <li><strong>Cityscape and Simulation Games:</strong> Visual and functional elements might draw inspiration from simulation games, where dynamic interactions with various entities are central.</li>
+</ol>
+
+</ol>
+<h1 id="challenges">Challenges and Solutions</h1>
         <ol>
             <li>
-                <strong>Animation Synchronization</strong>: Coordinating multiple animations such as moving clouds, a walking person, and rotating clock hands.
+                <strong>Animation Synchronization</strong>: Coordinating multiple animations such as moving clouds, moving bus, and rotating clock hands.
                 <div class="solution">Solution: Utilized <code>requestAnimationFrame</code> for smooth animations that sync across different parts of the scene.</div>
             </li>
             <li>
@@ -157,15 +238,24 @@ code {
             </li>
         </ol>
 
-        <h1 >Future Enhancements</h1>
+        <h1 id="enhancements">Future Enhancements</h1>
         <ol>
             <li><strong>Weather Effects:</strong> Integrate weather conditions like rain or snow, affecting the appearance and behavior of the cityscape.</li>
             <li><strong>Day-Night Cycle:</strong> Implement a day-night cycle with corresponding changes in lighting and activity levels.</li>
             <li><strong>Traffic Simulation: </strong>Expand the simulation to include traffic patterns, with cars obeying traffic rules and reacting to user interactions.</li>
             <li><strong>Mobile Optimization:</strong> Ensure the application is fully responsive and optimized for mobile devices to reach a wider audience.</li>
         </ol>
-        <h1>Project Link</h1>
-        <a href="https://mannatpruthi.github.io/0x08-2d-animation-project/"><h3>Dynamic Cityscape Animation Project</h3></a>
+        <h1 id="links">Important Links</h1>
+<div style="display: flex; align-items: center;">
+    <a href="https://mannatpruthi.github.io/0x08-2d-animation-project" style="margin-right: 20px;">
+        <h3>Project Link</h3>
+    </a>
+    <a href="https://github.com/MannatPruthi/0x08-2d-animation-project">
+        <h3>Github Repository Link</h3>
+    </a>
+</div>
+
+
     </div>
 </body>
 </html>
